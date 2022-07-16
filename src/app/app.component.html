@@ -1,22 +1,12 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://opensea.io/collection/8sian-main-collection">8SIAN</a>
+  </div>
+</nav>
+
 <div class="main-container">
 
-  <div id="main-grid-container" class="container">
+  <app-peoples></app-peoples>
 
-    <div class="row">
-      <div *ngFor="let total of totals" class="col-xs-12 col-sm-6 col-lg-3">
-
-        <div id="card-grid" class="card" style="width: 18rem;">
-
-          <img src="{{ total.picture }}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ total.name }} #{{ total.id }}</h5>
-            <p class="card-text">{{ total.desc }}</p>
-            <a href="{{ total.link }}" target="_blank" class="btn btn-primary">Check on Opensea <i id="opensea-icon" class="fa-solid fa-sailboat"></i></a>
-          </div>
-          
-        </div>
-      
-    </div>
-  </div>
 
 </div>
