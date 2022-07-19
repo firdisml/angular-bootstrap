@@ -9,11 +9,17 @@ import { PeoplesService } from './peoples.service';
 })
 export class AppComponent {
   
-
+  totals : IPeople [] = [];
 
   constructor(service: PeoplesService){
 
+    service.getPeople().subscribe(data => this.totals = data)
 
+  }
+
+  post = {
+    name :"Ali",
+    isFavorite : true    
   }
 
 }

@@ -6,7 +6,16 @@
 
 <div class="main-container">
 
-  <app-peoples></app-peoples>
+  <div id="main-grid-container" class="container">
+
+    <div class="row">
+      <div *ngFor="let total of totals" class="col-xs-12 col-sm-6 col-lg-3">
+
+        <app-peoples [picture]="total.picture" [name] = "total.name" [id]="total.id" [desc] = "total.desc" [link]="total.link"></app-peoples>
+
+      </div>
+    </div>
+  </div>
 
 
 </div>

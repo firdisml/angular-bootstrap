@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IPeople } from '../people';
 import { PeoplesService } from '../peoples.service'
 
@@ -8,7 +8,11 @@ import { PeoplesService } from '../peoples.service'
   styleUrls: ['./peoples.component.scss']
 })
 export class PeoplesComponent implements OnInit {
-
+  @Input("picture") _picture : string = "";
+  @Input("name") _name : string = "";
+  @Input("id") _id : number = 0;
+  @Input("desc") _desc : string = "";
+  @Input("link") _link : string = "";
   totals : IPeople [] = [];
 
   constructor(service: PeoplesService) { 
@@ -22,7 +26,6 @@ export class PeoplesComponent implements OnInit {
     
 
   }
-
 
 
 
